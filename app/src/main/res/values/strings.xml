@@ -1,3 +1,11 @@
 <resources>
     <string name="app_name">My Application</string>
+    <resources>
+        <string name="start_message">I'm thinking of a number between 1 and 100. Can you guess it?</string>
+        <string name="invalid_guess_message">Please enter a valid number.</string>
+        <string name="higher_message">Try guessing a higher number.</string>
+        <string name="lower_message">Try guessing a lower number.</string>
+        <string name="correct_message">Congratulations! You guessed the number in %d attempts.</string>
+        <string name="guess_button_text">Guess</string>
+    </resources>
 </resources>
