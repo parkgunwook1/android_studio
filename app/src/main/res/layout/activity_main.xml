@@ -6,60 +6,34 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <LinearLayout android:orientation="vertical"
-        tools:ignore="MissingConstraints"
-        android:layout_height="wrap_content"
-        android:layout_width="wrap_content"
-        >
-
-    <TextView
-        android:id= "@+id/textView"
-        android:text ="Number 1"
-        android:layout_height="wrap_content"
-        android:layout_width="wrap_content"/>
-
-    <EditText
-        android:id="@+id/edit1"
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center_horizontal">
 
-    <TextView
-            android:id="@+id/textView2"
-            android:text="Number 2"
-        android:layout_height="wrap_content"
-        android:layout_width="wrap_content"
-        />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="1 ~ 100까지 난수 맞추기"
+            android:textSize="20sp"
+            android:layout_marginBottom="20dp"/>
 
-    <EditText
-        android:id="@+id/edit2"
-        android:layout_height="wrap_content"
-        android:layout_width="wrap_content"/>
-    <Button
-        android:id="@+id/button1"
-        android:text="+ "
-        android:layout_height="wrap_content"
-        android:layout_width="wrap_content"/>
-
-    <Button
-         android:id="@+id/button2"
-         android:text="-"  android:layout_height="wrap_content"
-        android:layout_width="wrap_content"/>
-    <Button
-            android:id="@+id/button3"
-            android:text="*"  android:layout_height="wrap_content"
-            android:layout_width="wrap_content"/>
-    <Button
-        android:id="@+id/button4"
-        android:text="/"
-        android:layout_height="wrap_content"
-        android:layout_width="wrap_content" />
-    <TextView
-        android:id="@+id/textView3"
-        android:layout_height="wrap_content"
-        android:text="Result"  android:layout_width="wrap_content"/>
         <EditText
-            android:id="@+id/edit3"
-            android:layout_height="wrap_content"  android:layout_width="wrap_content"/>
+            android:id="@+id/guessEditText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:ems="10"
+            android:hint="Enter your guess"
+            android:layout_marginBottom="20dp"/>
+
+        <Button
+            android:id="@+id/submitButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Submit"/>
+
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

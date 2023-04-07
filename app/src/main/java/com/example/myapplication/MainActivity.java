@@ -16,52 +16,54 @@ import java.util.Random;
 
 public class MainActivity extends AppCompatActivity {
 
-    public class randomNum extends AppCompatActivity {
-        private int randomNumber;
-        private EditText guessEditText;
-        private Button submitButton;
-        private Random random = new Random();
-        @Override
-        protected void onCreate(Bundle savedInstanceState) {
-            super.onCreate(savedInstanceState);
-            setContentView(R.layout.activity_random_num);
+    private int randomNumber;
+    private EditText guessEditText;
+    private Button submitButton;
+    private Random random = new Random();
 
-            guessEditText = findViewById(R.id.guessEditText);
-            submitButton = findViewById(R.id.guessButton);
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
 
-            randomNumber = random.nextInt(100) + 1;
+        guessEditText = findViewById(R.id.guessEditText);
+        submitButton = findViewById(R.id.submitButton);
 
-            submitButton.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View view) {
-                    checkGuess();
-                }
-            });
+        randomNumber = random.nextInt(100) + 1;
+
+        submitButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                checkGuess();
+            }
+        });
+    }
+
+    private void checkGuess() {
+        String guessText = guessEditText.getText().toString();
+
+        if (guessText.isEmpty()) {
+            Toast.makeText(this, "Please enter a number", Toast.LENGTH_SHORT).show();
+            return;
         }
-        private void checkGuess() {
-            String guessText = guessEditText.getText().toString();
 
-            if (guessText.isEmpty()) {
-                Toast.makeText(this, "Please enter a number", Toast.LENGTH_SHORT).show();
-                return;
-            }
+        int guess = Integer.parseInt(guessText);
 
-            int guess = Integer.parseInt(guessText);
+        if (guess < 1 || guess > 100) {
+            Toast.makeText(this, "Please enter a number between 1 and 100", Toast.LENGTH_SHORT).show();
+            return;
+        }
 
-            if (guess < 1 || guess > 100) {
-                Toast.makeText(this, "Please enter a number between 1 and 100", Toast.LENGTH_SHORT).show();
-                return;
-            }
-
-            if (guess == randomNumber) {
-                Toast.makeText(this, "You guessed it right!", Toast.LENGTH_SHORT).show();
-            } else if (guess < randomNumber) {
-                Toast.makeText(this, "Try higher", Toast.LENGTH_SHORT).show();
-            } else {
-                Toast.makeText(this, "Try lower", Toast.LENGTH_SHORT).show();
-            }
+        if (guess == randomNumber) {
+            Toast.makeText(this, "You guessed it right!", Toast.LENGTH_SHORT).show();
+        } else if (guess < randomNumber) {
+            Toast.makeText(this, "Try higher", Toast.LENGTH_SHORT).show();
+        } else {
+            Toast.makeText(this, "Try lower", Toast.LENGTH_SHORT).show();
         }
     }
+}
+
 
 
 
