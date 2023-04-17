@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 // 앞에 androidx가 붙은 패키지는 JetPack에 속하는 클래스로서 호환성을 위하여 최근에 사용이 권장되는 패키지이다.
 
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -28,21 +29,12 @@ public class MainActivity extends AppCompatActivity {
         //setContentView() 라는 함수는 액티비티의 화면을 설정하는 함수
         // R.layout.activity_main은 activity_main.xml 파일을 나타낸다.
     }
-
-    public void onclicked(View v) {
-        Toast.makeText(getApplicationContext(), "버튼이 눌러졌습니다.",
+    // 버튼 이벤트를 처리하는 메소드 조건
+    // 1. public 이어야 한다.
+    // 2. void 반환형을 가진다.
+    // 3. View를 메소드의 인수로 가진다. 클릭된 view 객체가 전달된다.
+    public void sendMessage(View view) { //Toast는 사용자에게 간단하게 메시지를 빠르게 표시하는 기능을 제공한다.
+        Toast.makeText(getApplicationContext(), "버튼이 눌러졌습니다." ,
                 Toast.LENGTH_SHORT).show();
     }
-
-    final Button button = (Button) findViewById(R.id.button4);
-
-    button.setOnClickListener(new View.OnClickListener()
-
-    {
-        public void onClick (View v){
-
-        Toast.makeText(getApplicationContext(), "버튼이 눌러졌습니다"
-                , Toast.LENGTH_SHORT).show();
-    }
-    });
 }

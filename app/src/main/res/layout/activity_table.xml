@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <!-- 테이블 레이아웃은 자식 뷰들을 테이블 형태로 배ㅣ한다.
+         하나의 테이블은 여러 개의 tablerow 객체로 이루어지고 하나의 table row 안에는 여러 개의 셀 들어감 -->
+    <TableRow>
+        <TextView android:text="주소" />
+        <EditText android:text="서울시 종로구 120" />
+    </TableRow>
+
+    <TableRow>
+        <TextView android:text="이름"/>
+        <EditText android:text="홍길동"/>
+    </TableRow>
+
+    <TableRow>
+        <Button android:text="저장"/>
+        <Button android:text="취소"/>
+    </TableRow>
+
+</TableLayout>

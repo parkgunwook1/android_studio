@@ -1,34 +1,49 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="fill_parent"
-    android:layout_height="fill_parent">
+<!--  객체의 방향 또는 위치 = orientation
+     -horizontal = 수평
+     -vertical = 수직
+     gravity = 자식 배치 어떻게 할 것인지 -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    <!--match_parent - 부모 크기 꽉 채운다.
+        wrap_content - 뷰가 나타내는 내용물의 크기에 맞춘다.   -->
+
+    <Button
+        android:id="@+id/button1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="첫번째 버튼"></Button>
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="visible"
+        android:onClick="sendMessage"
+        android:text="두번째 버튼">
+    </Button>
+    <!-- 화면 보이기 속성
+         visivility로 사용
+         visible - 화면 보이게함, 디포트
+         invisible - 표시되지 않고 화면만 차지
+         gone - 완젼히 숨겨짐 -->
 
     <TextView
-        android:id="@+id/address"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:text="주소를 입력하세요" />
-    <EditText
-        android:id="@+id/input"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@android:drawable/editbox_background"
-        android:layout_below="@+id/address" />
+        android:background="#0000ff"
+        android:text="this is a test"
+        android:textColor="#ff0000"
+        android:textSize="20pt"
+        android:textStyle="italic"
+        android:typeface="serif" />
 
-    <Button
-        android:id="@+id/cancel"
-        android:layout_width="wrap_content"
+    <EditText
+        android:id = "@+id/editext1"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/input"
-        android:layout_alignParentRight="true"
-        android:layout_marginLeft="10dip"
-        android:text="취소" />
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_toLeftOf="@+id/cancel"
-        android:layout_alignTop="@id/cancel"
-        android:text="확인" />
-</RelativeLayout>
+        android:hint="아이디"
+        android:inputType="text" />
+    </LinearLayout>
