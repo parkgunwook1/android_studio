@@ -9,6 +9,7 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
@@ -28,6 +29,17 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         //setContentView() 라는 함수는 액티비티의 화면을 설정하는 함수
         // R.layout.activity_main은 activity_main.xml 파일을 나타낸다.
+
+        Button bplus = (Button) findViewById(R.id.button1);
+        EditText eText1 = (EditText) findViewById(R.id.edit1);
+        EditText eText2 = (EditText) findViewById(R.id.edit2);
+        EditText eText3 = (EditText) findViewById(R.id.edit3);
+        bplus.setOnClickListener(e -> {
+            String s1 = eText1.getText().toString();
+            String s2 = eText2.getText().toString();
+            int result = Integer.parseInt(s1) + Integer.parseInt(s2);
+            eText3.setText(""+result);
+        });
     }
     // 버튼 이벤트를 처리하는 메소드 조건
     // 1. public 이어야 한다.
@@ -38,3 +50,12 @@ public class MainActivity extends AppCompatActivity {
                 Toast.LENGTH_SHORT).show();
     }
 }
+    // 리스너 객체를 이용하여 처리 방법
+
+   /* class Listener implements  View.OnClickListener {
+        public void onClick(View v) {  // 리스너 인터페이스를 구현한 클래스 정의
+
+        }
+    }
+    Listener lis = new Listener();    // 이벤트 리스너 객체 생성
+    button.setOnclickListener(lis);*/ // 버튼에 이벤트 리스너 객체를 등록

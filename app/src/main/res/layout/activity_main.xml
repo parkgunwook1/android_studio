@@ -3,7 +3,8 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical" >
+    android:orientation="vertical"
+    android:gravity="center">
     <!-- (xmlns:android) =  xml 이름공간의 선언으로 안드로이드 이름공간에 정의된 속성들을 참조하려고 한다는 것을 암시한다.
        xml 파일에서 항상 최외곽 태그는 이 속성을 정의하여야 한다. -->
 
