@@ -10,6 +10,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
@@ -17,6 +18,10 @@ public class MainActivity extends AppCompatActivity {
 // 액티비티는 안드로이드에서 애플리케이션을 구성하는 4가지의 컴포넌트 중의 하나이다.
 // 액티비티는 화면을 통하여 사용자와 상호작용하는 횔동을 의미한다.
 
+    private TextView textView;
+    EditText eText;
+
+    Button btn;
     @Override // 메소드가 부모 클래스의 메소드를 재정의 하였다는 것을 나타낸다.
 
     protected void onCreate(Bundle savedInstanceState) {
