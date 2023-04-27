@@ -77,6 +77,38 @@
         android:textStyle="italic"
         android:typeface="serif" />
 
+    <ImageView
+        android:id="@+id/imageVeiw"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <RatingBar
+        android:id="@+id/ratingBar"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:numStars="5"
+        android:rating="2.0"
+        android:stepSize="1.0"/>
+    <Button
+        android:id="@+id/button5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:background="@color/black"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="0000ff"
+        android:text="This is a test"
+        android:textColor="#ff0000"
+        android:textSize="20pt"
+        android:textStyle="italic"
+        android:typeface="serif" />
+
+
+
+
 </LinearLayout>
 
     <!-- android:id = TextView 요소에 유일한 아이디를 할당한다. 이 아이디를 이용하여서 소스 코드에서 이 텍스트 뷰를 참조할 수 있다.
