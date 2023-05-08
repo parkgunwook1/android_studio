@@ -1,117 +1,75 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- 선형 레이아웃 뷰그룹 생성 -->
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    tools:context=".MainActivity"
     android:orientation="vertical"
-    android:gravity="center">
-    <!-- (xmlns:android) =  xml 이름공간의 선언으로 안드로이드 이름공간에 정의된 속성들을 참조하려고 한다는 것을 암시한다.
-       xml 파일에서 항상 최외곽 태그는 이 속성을 정의하여야 한다. -->
+    android:padding="30dp">
 
     <EditText
-        android:id="@+id/edittext"
-        android:layout_height="wrap_content"
+        android:id="@+id/editText1"
         android:layout_width="wrap_content"
-        android:hint="여기에 테스트를 입력하시오"
-        android:inputType="text"  />
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="number"
+        android:layout_margin="10dp"
+        android:text="숫자1" />
 
-    <ImageButton
-        android:id="@+id/imageButton1"
+    <EditText
+        android:id="@+id/editText2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:onClick="onClick"
-        android:src="@drawable/mybutton" />
+        android:layout_margin="10dp"
+        android:ems="10"
+        android:inputType="number"
+        android:text="숫자2" />
+
+    <Button
+        android:id="@+id/button1"
+        android:layout_margin="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="더하기" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_margin="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="빼기" />
+
+    <Button
+        android:id="@+id/button3"
+        android:layout_margin="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="곱하기" />
 
     <Button
         android:id="@+id/button4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:padding="10dp"
-        android:text="버튼을 눌러보세요" />
-
-    <!-- 버튼 뷰 생성
-         id : 뷰의 식별자자
-        match_parent =  부모의 크기를 꽉 채운다.
-         wrap_content = 뷰가 나타내는 내용물의 크기에 맞춘다.
-         숫자 : 크기를 정확히 지정한다.
-         enabled=" false" = 뷰를 사용할 것인지 사용하지 않을것인지 표기 -->
-    <Button
-        android:id="@+id/button1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:enabled="false"
-        android:text="첫번째 버튼"></Button>
-
-    <!-- visibility = 뷰의 유무를 지정하며, 속성값으로 아래의 3가지를 가질 수 있다.
-         invisible = 표시되지 않는다.
-         visible = 화면에 보이게한다. 디폴트 값
-         gone = 완전히 숨겨진다. -->
-    <Button
-        android:id="@+id/button2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:visibility="invisible"
-        android:text="두번째 버튼"></Button>
-
-    <!-- rotation : 뷰를 회전하기 위한 속성. 값으로 회전할 각도를 준다. -->
-    <Button
-        android:id="@+id/button3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:rotation="45"
-        android:text="첫번째 버튼"></Button>
-
-    <TextView
-        android:id="@+id/textview"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="안녕하세요" />
-
-    <TextView
+        android:layout_margin="10dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="0000ff"
-        android:text="This is a test"
-        android:textColor="#ff0000"
-        android:textSize="20pt"
-        android:textStyle="italic"
-        android:typeface="serif" />
+        android:text="나누기" />
 
-    <ImageView
-        android:id="@+id/imageVeiw"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
-
-    <RatingBar
-        android:id="@+id/ratingBar"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:numStars="5"
-        android:rating="2.0"
-        android:stepSize="1.0"/>
     <Button
         android:id="@+id/button5"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:background="@color/black"/>
-
-    <TextView
+        android:layout_margin="10dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="0000ff"
-        android:text="This is a test"
-        android:textColor="#ff0000"
-        android:textSize="20pt"
-        android:textStyle="italic"
-        android:typeface="serif" />
+        android:text="나머지값" />
 
 
 
 
+    <TextView
+        android:id="@+id/TextResult"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="30dp"
+        android:textColor="#FF0000"
+        android:layout_margin="10dp"
+        android:text="계산결과: " />
 </LinearLayout>
-
-    <!-- android:id = TextView 요소에 유일한 아이디를 할당한다. 이 아이디를 이용하여서 소스 코드에서 이 텍스트 뷰를 참조할 수 있다.
-         android:layout_width = 화면에서 얼마나 폭을 차지할 것인지를 정의한다. "match_parent"는 부모 화면의 폭을 다 차지하는 것을 의미한다.
-         android:layout_height = 화면에서 높이를 얼마나 차지할 것인지를 정의한다. "wrap_content"는 콘텐츠를 표시할 정도만 차지하는 것을 의미한다.
-         android:text = 화면에 표시하는 텍스트를 설정한다. 이 속성은 예제와 같이 하드코딩될 수도 있고 아니면 문자열 리소스의 개념을 사용할 수도도있다.
